@@ -25,7 +25,7 @@ jobs:
             echo "::set-output name=createPR::true"
           fi
       - name: Create PR
-        if: ${{ steps.compare_chains.createPR }}
+        if: ${{ steps.compare_chains.outputs.createPR }}
         run: |
           timestamp=$(date +%Y%m%d%H%M)
           git config user.name cl-docs
