@@ -40,3 +40,5 @@ jobs:
           git commit -m "chains metadata updated"
           git push --set-upstream origin ${branch}
           gh pr create --title "Update chains metadata ${timestamp}" --body "New chains metadata available. Please review and merge" --label "enhancement" --base main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
