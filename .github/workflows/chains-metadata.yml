@@ -8,6 +8,7 @@ jobs:
   check-chains-metadata:
     permissions:
       pull-requests: write
+      repository-projects: write
     name: Check if chains metadata is up to date
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +28,7 @@ jobs:
       - name: Create PR
         if: ${{ steps.compare_chains.outputs.createPR }}
         run: |
+          set -x
           timestamp=$(date +%Y%m%d%H%M)
           git config user.name cl-docs
           git config user.email cl-docs@users.noreply.github.com
