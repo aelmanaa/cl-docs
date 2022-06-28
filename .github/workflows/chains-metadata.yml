@@ -2,7 +2,7 @@ name: Check if chains metadata is up to date
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   check-chains-metadata:
@@ -38,4 +38,4 @@ jobs:
           git add ./_src/reference/chains.json
           git commit -m "chains metadata updated"
           git push --set-upstream origin ${branch}
-          gh pr create "Update chains metadata ${timestamp}" --body "New chains metadata available. Please review and merge"
+          gh pr create --title "Update chains metadata ${timestamp}" --body "New chains metadata available. Please review and merge" --label "enhancement" --base main
