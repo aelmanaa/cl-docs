@@ -1,0 +1,35 @@
+{
+  "name": "cl-docs-actions",
+  "version": "1.0.0",
+  "repository": "git@github.com:aelmanaa/cl-docs.git",
+  "author": "aelmanaa <aelmanaa@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "npx hardhat compile",
+    "compare-chains-metadata": "npx ts-node _src/chains-metadata.ts"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.7",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node-fetch": "^2.6.2",
+    "@types/prettier": "^2.6.3",
+    "ts-node": "^10.8.1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "engineStrict": true,
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}
