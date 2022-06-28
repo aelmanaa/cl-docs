@@ -6,7 +6,7 @@ on:
 
 jobs:
   check-chains-metadata:
-    permissions: read-all|write-all
+    permissions: write-all
     #permissions:
     #pull-requests: write
     #repository-projects: write
