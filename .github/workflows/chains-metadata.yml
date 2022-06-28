@@ -2,7 +2,7 @@ name: Check if chains metadata is up to date
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/3 * * * *'
 
 jobs:
   check-chains-metadata:
