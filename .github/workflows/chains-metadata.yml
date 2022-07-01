@@ -8,8 +8,9 @@ on:
 jobs:
   check-chains-metadata:
     #permissions: write-all
-    #permissions:
-    #pull-requests: write
+    permissions:
+      pull-requests: write
+      contents: write
     #repository-projects: write
     name: Check if chains metadata is up to date
     runs-on: ubuntu-latest
