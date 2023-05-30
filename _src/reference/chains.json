@@ -7,8 +7,10 @@
       "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
       "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
       "https://api.mycryptoapi.com/eth",
-      "https://cloudflare-eth.com"
+      "https://cloudflare-eth.com",
+      "https://ethereum.publicnode.com"
     ],
+    "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
     "faucets": [],
     "nativeCurrency": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
     "infoURL": "https://ethereum.org",
@@ -23,10 +25,9 @@
     "name": "Rinkeby",
     "title": "Ethereum Testnet Rinkeby",
     "chain": "ETH",
-    "network": "testnet",
     "rpc": ["https://rinkeby.infura.io/v3/${INFURA_API_KEY}", "wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}"],
     "faucets": ["http://fauceth.komputing.org?chain=4&address=${ADDRESS}", "https://faucet.rinkeby.io"],
-    "nativeCurrency": { "name": "Rinkeby Ether", "symbol": "RIN", "decimals": 18 },
+    "nativeCurrency": { "name": "Rinkeby Ether", "symbol": "ETH", "decimals": 18 },
     "infoURL": "https://www.rinkeby.io",
     "shortName": "rin",
     "chainId": 4,
@@ -35,21 +36,21 @@
     "explorers": [{ "name": "etherscan-rinkeby", "url": "https://rinkeby.etherscan.io", "standard": "EIP3091" }]
   },
   {
-    "name": "Görli",
-    "title": "Ethereum Testnet Görli",
+    "name": "Goerli",
+    "title": "Ethereum Testnet Goerli",
     "chain": "ETH",
-    "network": "testnet",
     "rpc": [
       "https://goerli.infura.io/v3/${INFURA_API_KEY}",
       "wss://goerli.infura.io/v3/${INFURA_API_KEY}",
-      "https://rpc.goerli.mudit.blog/"
+      "https://rpc.goerli.mudit.blog/",
+      "https://ethereum-goerli.publicnode.com"
     ],
     "faucets": [
       "http://fauceth.komputing.org?chain=5&address=${ADDRESS}",
       "https://goerli-faucet.slock.it?address=${ADDRESS}",
       "https://faucet.goerli.mudit.blog"
     ],
-    "nativeCurrency": { "name": "Görli Ether", "symbol": "GOR", "decimals": 18 },
+    "nativeCurrency": { "name": "Goerli Ether", "symbol": "ETH", "decimals": 18 },
     "infoURL": "https://goerli.net/#about",
     "shortName": "gor",
     "chainId": 5,
@@ -67,26 +68,25 @@
     "shortName": "oeth",
     "chainId": 10,
     "networkId": 10,
-    "explorers": [{ "name": "etherscan", "url": "https://optimistic.etherscan.io", "standard": "none" }]
+    "explorers": [{ "name": "etherscan", "url": "https://optimistic.etherscan.io", "standard": "EIP3091" }]
   },
   {
     "name": "RSK Mainnet",
     "chain": "RSK",
     "rpc": ["https://public-node.rsk.co", "https://mycrypto.rsk.co"],
-    "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
-    "nativeCurrency": { "name": "RSK Mainnet Ether", "symbol": "RBTC", "decimals": 18 },
+    "faucets": ["https://faucet.rsk.co/"],
+    "nativeCurrency": { "name": "Smart Bitcoin", "symbol": "RBTC", "decimals": 18 },
     "infoURL": "https://rsk.co",
     "shortName": "rsk",
     "chainId": 30,
     "networkId": 30,
     "slip44": 137,
-    "explorers": [{ "name": "blockscout", "url": "https://explorer.rsk.co", "standard": "EIP3091" }]
+    "explorers": [{ "name": "RSK Explorer", "url": "https://explorer.rsk.co", "standard": "EIP3091" }]
   },
   {
     "name": "Kovan",
     "title": "Ethereum Testnet Kovan",
     "chain": "ETH",
-    "network": "testnet",
     "rpc": [
       "https://kovan.poa.network",
       "http://kovan.poa.network:8545",
@@ -99,7 +99,7 @@
       "https://faucet.kovan.network",
       "https://gitter.im/kovan-testnet/faucet"
     ],
-    "nativeCurrency": { "name": "Kovan Ether", "symbol": "KOV", "decimals": 18 },
+    "nativeCurrency": { "name": "Kovan Ether", "symbol": "ETH", "decimals": 18 },
     "explorers": [{ "name": "etherscan", "url": "https://kovan.etherscan.io", "standard": "EIP3091" }],
     "infoURL": "https://kovan-testnet.github.io/website",
     "shortName": "kov",
@@ -122,6 +122,7 @@
       "https://bsc-dataseed2.ninicoin.io",
       "https://bsc-dataseed3.ninicoin.io",
       "https://bsc-dataseed4.ninicoin.io",
+      "https://bsc.publicnode.com",
       "wss://bsc-ws-node.nariox.org"
     ],
     "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
@@ -139,7 +140,7 @@
     "chain": "ETH",
     "rpc": ["https://kovan.optimism.io/"],
     "faucets": ["http://fauceth.komputing.org?chain=69&address=${ADDRESS}"],
-    "nativeCurrency": { "name": "Kovan Ether", "symbol": "KOR", "decimals": 18 },
+    "nativeCurrency": { "name": "Kovan Ether", "symbol": "ETH", "decimals": 18 },
     "explorers": [{ "name": "etherscan", "url": "https://kovan-optimistic.etherscan.io", "standard": "EIP3091" }],
     "infoURL": "https://optimism.io",
     "shortName": "okov",
@@ -155,7 +156,8 @@
       "https://data-seed-prebsc-1-s2.binance.org:8545",
       "https://data-seed-prebsc-2-s2.binance.org:8545",
       "https://data-seed-prebsc-1-s3.binance.org:8545",
-      "https://data-seed-prebsc-2-s3.binance.org:8545"
+      "https://data-seed-prebsc-2-s3.binance.org:8545",
+      "https://bsc-testnet.publicnode.com"
     ],
     "faucets": ["https://testnet.binance.org/faucet-smart"],
     "nativeCurrency": { "name": "Binance Chain Native Token", "symbol": "tBNB", "decimals": 18 },
@@ -167,7 +169,7 @@
   },
   {
     "name": "Gnosis",
-    "chain": "Gnosis",
+    "chain": "GNO",
     "icon": "gnosis",
     "rpc": [
       "https://rpc.gnosischain.com",
@@ -177,17 +179,19 @@
       "wss://rpc.gnosischain.com/wss"
     ],
     "faucets": [
+      "https://gnosisfaucet.com",
       "https://faucet.gimlu.com/gnosis",
       "https://stakely.io/faucet/gnosis-chain-xdai",
       "https://faucet.prussia.dev/xdai"
     ],
     "nativeCurrency": { "name": "xDAI", "symbol": "xDAI", "decimals": 18 },
-    "infoURL": "https://developers.gnosischain.com",
+    "infoURL": "https://docs.gnosischain.com",
     "shortName": "gno",
     "chainId": 100,
     "networkId": 100,
     "slip44": 700,
     "explorers": [
+      { "name": "gnosisscan", "url": "https://gnosisscan.io", "standard": "EIP3091" },
       {
         "name": "blockscout",
         "url": "https://blockscout.com/xdai/mainnet",
@@ -212,18 +216,20 @@
   {
     "name": "Polygon Mainnet",
     "chain": "Polygon",
+    "icon": "polygon",
     "rpc": [
       "https://polygon-rpc.com/",
       "https://rpc-mainnet.matic.network",
       "https://matic-mainnet.chainstacklabs.com",
       "https://rpc-mainnet.maticvigil.com",
       "https://rpc-mainnet.matic.quiknode.pro",
-      "https://matic-mainnet-full-rpc.bwarelabs.com"
+      "https://matic-mainnet-full-rpc.bwarelabs.com",
+      "https://polygon-bor.publicnode.com"
     ],
     "faucets": [],
     "nativeCurrency": { "name": "MATIC", "symbol": "MATIC", "decimals": 18 },
     "infoURL": "https://polygon.technology/",
-    "shortName": "MATIC",
+    "shortName": "matic",
     "chainId": 137,
     "networkId": 137,
     "slip44": 966,
@@ -232,7 +238,7 @@
   {
     "name": "Fantom Opera",
     "chain": "FTM",
-    "rpc": ["https://rpc.ftm.tools"],
+    "rpc": ["https://rpc.ftm.tools", "https://fantom.publicnode.com"],
     "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
     "nativeCurrency": { "name": "Fantom", "symbol": "FTM", "decimals": 18 },
     "infoURL": "https://fantom.foundation",
@@ -269,7 +275,7 @@
   {
     "name": "Fantom Testnet",
     "chain": "FTM",
-    "rpc": ["https://rpc.testnet.fantom.network"],
+    "rpc": ["https://rpc.testnet.fantom.network", "https://fantom-testnet.publicnode.com"],
     "faucets": ["https://faucet.fantom.network"],
     "nativeCurrency": { "name": "Fantom", "symbol": "FTM", "decimals": 18 },
     "infoURL": "https://docs.fantom.foundation/quick-start/short-guide#fantom-testnet",
@@ -302,7 +308,8 @@
   {
     "name": "Avalanche Fuji Testnet",
     "chain": "AVAX",
-    "rpc": ["https://api.avax-test.network/ext/bc/C/rpc"],
+    "icon": "avax",
+    "rpc": ["https://api.avax-test.network/ext/bc/C/rpc", "https://avalanche-fuji-c-chain.publicnode.com"],
     "faucets": ["https://faucet.avax-test.network/"],
     "nativeCurrency": { "name": "Avalanche", "symbol": "AVAX", "decimals": 18 },
     "infoURL": "https://cchain.explorer.avax-test.network",
@@ -314,11 +321,13 @@
   {
     "name": "Avalanche C-Chain",
     "chain": "AVAX",
-    "rpc": ["https://api.avax.network/ext/bc/C/rpc"],
+    "icon": "avax",
+    "rpc": ["https://api.avax.network/ext/bc/C/rpc", "https://avalanche-c-chain.publicnode.com"],
+    "features": [{ "name": "EIP1559" }],
     "faucets": ["https://free-online-app.com/faucet-for-eth-evm-chains/"],
     "nativeCurrency": { "name": "Avalanche", "symbol": "AVAX", "decimals": 18 },
     "infoURL": "https://www.avax.network/",
-    "shortName": "Avalanche",
+    "shortName": "avax",
     "chainId": 43114,
     "networkId": 43114,
     "slip44": 9005,
@@ -328,10 +337,12 @@
     "name": "Mumbai",
     "title": "Polygon Testnet Mumbai",
     "chain": "Polygon",
+    "icon": "polygon",
     "rpc": [
       "https://matic-mumbai.chainstacklabs.com",
       "https://rpc-mumbai.maticvigil.com",
-      "https://matic-testnet-archive-rpc.bwarelabs.com"
+      "https://matic-testnet-archive-rpc.bwarelabs.com",
+      "https://polygon-mumbai-bor.publicnode.com"
     ],
     "faucets": ["https://faucet.polygon.technology/"],
     "nativeCurrency": { "name": "MATIC", "symbol": "MATIC", "decimals": 18 },
@@ -348,7 +359,7 @@
     "shortName": "arb-rinkeby",
     "chain": "ETH",
     "networkId": 421611,
-    "nativeCurrency": { "name": "Arbitrum Rinkeby Ether", "symbol": "ARETH", "decimals": 18 },
+    "nativeCurrency": { "name": "Arbitrum Rinkeby Ether", "symbol": "ETH", "decimals": 18 },
     "rpc": ["https://rinkeby.arbitrum.io/rpc"],
     "faucets": ["http://fauceth.komputing.org?chain=421611&address=${ADDRESS}"],
     "infoURL": "https://arbitrum.io",
@@ -372,6 +383,7 @@
   },
   {
     "name": "Harmony Testnet Shard 0",
+    "chain": "Harmony",
     "rpc": ["https://api.s0.b.hmny.io"],
     "faucets": ["https://faucet.pops.one"],
     "nativeCurrency": { "name": "ONE", "symbol": "ONE", "decimals": 18 },
